@@ -16,7 +16,7 @@ type SmartFilterClient struct {
 func NewSmartFilterClient(apiKey string) *SmartFilterClient {
 	smartFilter := new(SmartFilterClient)
 	smartFilter.apiKey = apiKey
-	smartFilter.base = "http://localhost:9090/1"
+	smartFilter.base = "http://api.prevoty.com/1"
 	return smartFilter
 }
 
