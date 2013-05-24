@@ -5,9 +5,12 @@ import (
 	"github.com/prevoty/smartfilter-go/client"
 )
 
+const (
+	apiKey = "api key goes here"
+	ruleKey = "rule key goes here"
+)
+
 func main() {
-	apiKey := "api key goes here"
-	ruleKey := "rule key goes here"
 	input := "the <script>alert('quick brown fox');</script> jumps over the lazy dog & mouse"
 
 	// Create an instance of SmartFilter
