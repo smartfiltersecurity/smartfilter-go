@@ -3,7 +3,6 @@ package client
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"net/http"
 	"net/url"
 )
@@ -47,11 +46,7 @@ func (self *SmartFilterClient) Info() (*SmartFilterInformation, error) {
 	if err == nil {
 		switch response.StatusCode {
 		case 200:
-			body, ioErr := ioutil.ReadAll(response.Body)
-			if ioErr != nil {
-				return information, ioErr
-			}
-			decodingErr := json.Unmarshal(body, &information)
+			decodingErr := json.NewDecoder(response.Body).Decode(information)
 			if decodingErr != nil {
 				return information, decodingErr
 			}
@@ -94,11 +89,7 @@ func (self *SmartFilterClient) Filter(input string, ruleKey string) (*SmartFilte
 	if err == nil {
 		switch response.StatusCode {
 		case 200:
-			body, ioErr := ioutil.ReadAll(response.Body)
-			if ioErr != nil {
-				return result, ioErr
-			}
-			decodingErr := json.Unmarshal(body, &result)
+			decodingErr := json.NewDecoder(response.Body).Decode(result)
 			if decodingErr != nil {
 				return result, decodingErr
 			}
