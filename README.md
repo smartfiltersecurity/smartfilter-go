@@ -1,6 +1,6 @@
 # SmartFilter Go bindings
 
-## SmartFilter?
+## SmartFilter
 
 The SmartFilter REST API is the easiest way for individuals and organizations to prevent cross-site scripting (XSS) attacks in their web applications. The API has been designed to provide simple access to the powerful content analysis systems and intelligence tools that Prevoty has developed.
 
