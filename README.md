@@ -12,7 +12,7 @@ Prevoty has developed a Go library to use SmartFilter quickly and easily.
 
 To get started:
 
-1) Install the library `go get github.com/prevoty/smartfilter-go/client`
+1) Install the library `go get github.com/smartfiltersecurity/smartfilter-go/client`
 
 2) Pull a copy or .zip/.tar of the `examples` directory
 
